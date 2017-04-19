@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <script src="https://use.typekit.net/jfx6whv.js"></script>
+    <script type="text/javascript">
+      try{Typekit.load({ async: true });}catch(e){}
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9915287-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+      })();
+    </script>
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+    <div id="header-container">
+      <div id="header">
+        {{#is "home"}}<h1><span class="prefix">The Blog of</span> Zachary Voase</h1>{{/is}}
+        {{^is "home"}}<h1><a href="/"><span class="prefix">The Blog of</span> Zachary Voase</a></h1>{{/is}}
+      </div>
+    </div>
+
+    <div id="meta" class="content-container">
+      <p class="copy content">{{@blog.description}}</p>
+      {{navigation}}
+    </div>
+
+    {{> "spacer"}}
+
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    <div id="footer-container">
+      <div id="footer">
+        <p class="licensing">
+          All content on this site is released into the
+          <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">Public Domain</a>.
+        </p>
+      </div>
+    </div>
+
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+</body>
+</html>

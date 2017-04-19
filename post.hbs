@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#post}}
+
+<div class="content-container">
+  <article class="content article {{post_class}}">
+    <p class="index-link-container">
+      <a class="index-link" href="/">← All posts</a>
+    </p>
+
+    <h1>{{title}}</h1>
+
+    <time class="date" datetime="{{date format="YYYY-MM-DD"}}">
+      {{date format="dddd Do MMMM[,] YYYY"}}
+    </time>
+
+    <div class="contents">{{content}}</div>
+  </article>
+</div>
+
+{{/post}}

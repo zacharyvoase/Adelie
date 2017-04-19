@@ -1,0 +1,20 @@
+{{#is "paged"}}
+<div class="extra-pagination inner">
+    {{pagination}}
+</div>
+{{/is}}
+
+<ul id="articles">
+  {{#foreach posts}}
+  <li class="{{post_class}}"><div>
+    <time class="date" datetime="{{date format="YYYY-MM-DD"}}">
+      <span class="date_day">{{date format="DD"}}</span>
+      <span class="date_month">{{date format="MMM"}}</span>
+      <span class="date_year">{{date format="YYYY"}}</span>
+    </time>
+    <a class="link" href="{{url}}">{{title}}</a>
+  </div></li>
+  {{/foreach}}
+</ul>
+
+{{pagination}}
