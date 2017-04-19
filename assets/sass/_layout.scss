@@ -36,6 +36,13 @@ p, iframe, fieldset, table, pre {
   margin-bottom: 26px;
 }
 
+iframe {
+  @include mobile {
+    width: 100%;
+    height: auto;
+  }
+}
+
 p.summary {
   padding-bottom: 26px;
   border-bottom: 3px double $grey * 2;
