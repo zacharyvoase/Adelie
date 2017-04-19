@@ -1,6 +1,7 @@
 .DS_Store
 .idea/*
 .sass-cache/
+assets/css/
 b-cov/
 dist/
 logs/
