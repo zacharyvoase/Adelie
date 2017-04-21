@@ -257,11 +257,12 @@ blockquote {
   margin: 0 0 16px 0;
   padding: 10px 20px;
   min-width: 640px - (20px * 2);
-  background-color: $grey * 2;
+  border-left: 5px solid $grey * 2;
 
   @include mobile { min-width: 0; }
 
-  & :last-child { margin-bottom: 0 !important; }
+  > :last-child { margin-bottom: 0 !important; }
+  > :first-child { margin-top: 0 !important; }
 }
 
 ul, ol { margin-right: 0; }
