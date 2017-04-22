@@ -96,6 +96,7 @@ body, html {
 
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 100%;
   box-shadow:
     inset 0px -90px 80px -25px rgba(0, 0, 0, .8),
     inset 0px 30px 60px -30px rgba(0, 0, 0, .6);
@@ -103,6 +104,9 @@ body, html {
   .post-meta {
     @include section;
     margin: 250px auto 1em auto;
+    @include mobile {
+      margin: 100px auto 1em auto;
+    }
 
     .date {
       display: inline-block;
