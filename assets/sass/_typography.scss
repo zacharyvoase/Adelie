@@ -58,6 +58,7 @@ $monospace-block: "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Cour
   p.copy {
     font-family: $serif;
     text-transform: none;
+    white-space: pre-line;
     font-size: 18px;
     line-height: 24px;
   }
@@ -131,6 +132,25 @@ $monospace-block: "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Cour
     color: $grey * 0.5;
     font-size: 14px;
     text-align: center;
+  }
+}
+
+.post-image-header {
+  > .post-meta {
+    > h1 {
+      @extend .titling;
+      font-size: 28px;
+      line-height: 36px;
+      text-align: left;
+      color: white;
+    }
+
+    > .date {
+      @extend .titling;
+      color: white;
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 }
 

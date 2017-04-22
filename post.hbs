@@ -1,7 +1,23 @@
 {{!< default}}
 
 {{#post}}
+{{#if image}}
+<div class="post-image-header" style="background-image: url('{{image absolute=true}}')">
+  <div class="post-meta">
+    <h1>{{title}}</h1>
 
+    <time class="date" datetime="{{date format="YYYY-MM-DD"}}">
+      {{date format="dddd Do MMMM[,] YYYY"}}
+    </time>
+  </div>
+</div>
+
+<div class="content-container has-image">
+  <article class="content article {{post_class}} has-image">
+    <div class="contents">{{content}}</div>
+  </article>
+</div>
+{{else}}
 <div class="content-container">
   <article class="content article {{post_class}}">
     <p class="index-link-container">
@@ -17,5 +33,6 @@
     <div class="contents">{{content}}</div>
   </article>
 </div>
+{{/if}}
 
 {{/post}}
